@@ -1,0 +1,8 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get single contact
+GET http://localhost:3000/contacts/{{contactId}}
+
+### Base route
+GET http://localhost:3000/

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getContactsCollection } = require('../config/database');
-const { ObjectId } = require('mongodb');
+const { ObjectId } = require('mongodb').ObjectId;
 
 // GET all contacts
 router.get('/', async (req, res) => {

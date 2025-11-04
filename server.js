@@ -8,24 +8,35 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
-// Initialize database connection
-connectToDatabase();
+// Async function to initialize database and start server
+async function startServer() {
+  try {
+    await connectToDatabase(); // wait for DB connection
+    console.log('Database connected successfully');
 
-// Routes
-app.use('/contacts', require('./routes/contacts'));
+    // Routes
+    app.use('/contacts', require('./routes/contacts'));
 
-// Basic route
-app.get('/', (req, res) => {
-  res.json({ 
-    message: 'Contacts API - Hello World!',
-    endpoints: {
-      getAllContacts: 'GET /contacts',
-      getContact: 'GET /contacts/:id'
-    }
-  });
-});
+    // Basic route
+    app.get('/', (req, res) => {
+      res.json({ 
+        message: 'Contacts API - Hello World!',
+        endpoints: {
+          getAllContacts: 'GET /contacts',
+          getContact: 'GET /contacts/:id'
+        }
+      });
+    });
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+    // Start server after DB is ready
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+
+  } catch (error) {
+    console.error('Failed to start server:', error);
+  }
+}
+
+// Start everything
+startServer();
