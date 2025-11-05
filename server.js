@@ -22,8 +22,8 @@ async function startServer() {
       res.json({ 
         message: 'Contacts API - Hello World!',
         endpoints: {
-          getAllContacts: 'GET /contacts',
-          getContact: 'GET /contacts/:id'
+          getAllContacts: 'GET/contacts',
+          getContact: 'GET/contacts/:id'
         }
       });
     });
