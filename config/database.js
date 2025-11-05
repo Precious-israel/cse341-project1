@@ -13,7 +13,7 @@ async function connectToDatabase() {
     const db = client.db('Project1');          // MongoDB database name
     contactsCollection = db.collection('contactsdb'); // MongoDB collection name
 
-    console.log('✅ Connected to MongoDB (project1.contactsdb)');
+    console.log('✅ Connected to MongoDB (Project1.contactsdb)');
     return contactsCollection;
   } catch (error) {
     console.error('❌ Error connecting to MongoDB:', error);
