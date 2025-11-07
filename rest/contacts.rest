@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+DELETE http://localhost:3000/contacts/690db03e59caccf423ead6ed
 
 
 ### Swagger Documentation
