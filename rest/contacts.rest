@@ -1,0 +1,40 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get single contact
+GET http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+
+### Base route
+GET http://localhost:3000/
+
+
+### Create new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Alli",
+  "lastName": "Fashola",
+  "email": "a.fashola@gmail.com",
+  "favoriteColor": "Purple",
+  "birthday": "1988-03-20"
+}
+
+### Update contact
+PUT http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "email": "john.smith@gmail.com",
+  "favoriteColor": "Green",
+  "birthday": "1990-05-15"
+}
+
+### Delete contact
+DELETE http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+
+
+### Swagger Documentation
+GET http://localhost:3000/api-docs

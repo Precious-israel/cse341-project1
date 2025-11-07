@@ -1,8 +1,0 @@
-### Get all contacts
-GET http://localhost:3000/contacts
-
-### Get single contact
-GET http://localhost:3000/contacts/6908eafccff9fe1d576261e2
-
-### Base route
-GET http://localhost:3000/

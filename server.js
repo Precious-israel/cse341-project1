@@ -1,5 +1,7 @@
 const express = require('express');
 const { connectToDatabase } = require('./config/database');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 require('dotenv').config();
 
 const app = express();
@@ -14,6 +16,9 @@ async function startServer() {
     await connectToDatabase(); // wait for DB connection
     console.log('Database connected successfully');
 
+    // Swagger Documentation
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
     // Routes
     app.use('/contacts', require('./routes/contacts'));
 
@@ -22,8 +27,12 @@ async function startServer() {
       res.json({ 
         message: 'Contacts API - Hello World!',
         endpoints: {
-          getAllContacts: 'GET/contacts',
-          getContact: 'GET/contacts/:id'
+          getAllContacts: 'GET /contacts',
+          getContact: 'GET /contacts/:id',
+          createContact: 'POST /contacts',
+          updateContact: 'PUT /contacts/:id',
+          deleteContact: 'DELETE /contacts/:id',
+          documentation: 'GET /api-docs'
         }
       });
     });
@@ -31,6 +40,7 @@ async function startServer() {
     // Start server after DB is ready
     app.listen(port, () => {
       console.log(`Server running on port ${port}`);
+      console.log(`API Documentation available at http://localhost:${port}/api-docs`);
     });
 
   } catch (error) {
