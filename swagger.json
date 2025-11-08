@@ -2,16 +2,16 @@
   "swagger": "2.0",
   "info": {
     "title": "Contacts API",
-    "description": "A comprehensive REST API for managing contacts with full CRUD operations. Built for CSE 341 Web Services.",
+    "description": "CSE 341 Web Services.",
     "version": "1.0.0",
     "contact": {
       "name": "API Support",
-      "url": "https://github.com/your-repo",
-      "email": "support@contactsapi.com"
+      "url": "",
+      "email": ""
     },
     "license": {
-      "name": "MIT",
-      "url": "https://opensource.org/licenses/MIT"
+      "name": "",
+      "url": ""
     }
   },
   "host": "",
@@ -22,8 +22,8 @@
       "description": "Contact management endpoints"
     },
     {
-      "name": "Health",
-      "description": "Server health check"
+      "name": "Hello World",
+      "description": ""
     }
   ],
   "schemes": [],
@@ -54,7 +54,7 @@
     "/contacts": {
       "get": {
         "tags": ["Contacts"],
-        "summary": "Get all contacts",
+        "summary": "",
         "description": "Retrieve a list of all contacts",
         "responses": {
           "200": {
@@ -76,7 +76,7 @@
       },
       "post": {
         "tags": ["Contacts"],
-        "summary": "Create a new contact",
+        "summary": " ",
         "description": "Create a new contact with the provided information",
         "parameters": [
           {
