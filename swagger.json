@@ -14,7 +14,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "localhost:3001",
+  "host": "",
   "basePath": "/",
   "tags": [
     {
@@ -26,7 +26,7 @@
       "description": "Server health check"
     }
   ],
-  "schemes": ["http"],
+  "schemes": [],
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
