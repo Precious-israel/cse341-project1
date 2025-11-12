@@ -1,17 +1,7 @@
-const express = require('express');
-const router = express.Router();
-
-
-router.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    message: 'Contacts API is running',
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development',
-    version: '1.0.0'
-  });
-});
-
-
+const router = require('express').Router();
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../swagger.json');
+router.use('/api-docs', swaggerUi.serve);
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 module.exports = router;

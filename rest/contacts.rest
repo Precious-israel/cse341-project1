@@ -1,15 +1,15 @@
 ### Get all contacts
-GET http://localhost:3000/contacts
+GET http://localhost:3001/contacts
 
 ### Get single contact
-GET http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+GET http://localhost:3001/contacts/6908eafccff9fe1d576261e2
 
 ### Base route
-GET http://localhost:3000/
+GET http://localhost:3001/
 
 
 ### Create new contact
-POST http://localhost:3000/contacts
+POST http://localhost:3001/contacts
 Content-Type: application/json
 
 {
@@ -21,7 +21,7 @@ Content-Type: application/json
 }
 
 ### Update contact
-PUT http://localhost:3000/contacts/6908eafccff9fe1d576261e2
+PUT http://localhost:3001/contacts/6908eafccff9fe1d576261e2
 Content-Type: application/json
 
 {
@@ -33,8 +33,8 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE http://localhost:3000/contacts/690db03e59caccf423ead6ed
+DELETE http://localhost:3001/contacts/690db03e59caccf423ead6ed
 
 
 ### Swagger Documentation
-GET http://localhost:3000/api-docs
+GET http://localhost:3001/api-docs
