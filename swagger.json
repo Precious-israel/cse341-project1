@@ -5,9 +5,10 @@
     "description": "This is an API for contacts",
     "version": "1.0.0"
   },
-  "host": "https://dashboard.render.com/web/srv-d44se4q4d50c73ep004g",
+  "host": "cse341-project1-5vd6.onrender.com",
   "basePath": "/",
   "schemes": [
+    
     "https"
   ],
   "paths": {
